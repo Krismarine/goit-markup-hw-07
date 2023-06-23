@@ -1,0 +1,358 @@
+/* MOBILE */
+@media screen and (min-width: 428px){
+
+.container-team--cards>.container{
+    max-width: 396px;
+}
+
+}
+
+
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+.container{
+    max-width: 736px;
+} 
+/*HERO*/
+.hero {
+    padding: 112px 0 112px 0;
+}
+
+.title-hero {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.07;
+    /* or 107% */
+    margin-bottom: 48px;
+    max-width: 496px;
+}
+/* FEATURES*/
+
+.list-features{
+    gap: 72px 24px;
+}
+.list-features-item{
+  max-width: calc((100% - var(--cards-gap))/ 2) ;
+}
+/* OUR TEAM*/
+
+.list-team{
+    gap: 64px 24px;
+}
+.list-team-item {
+    width: calc((100% - var(--cards-gap))/ 2);
+}
+.container-team--cards>.container{
+    max-width: 552px;
+    }
+/* CUSTOMERS*/
+
+.customers>.container{
+    max-width: 552px;
+}
+.list-customers{
+    gap: 72px 24px;
+}    
+.link-customers-item {
+    width: calc((100% - 2 * var(--cards-gap))/ 3);
+}
+/* FOOTER*/
+
+.footer>.container{
+    max-width: 552px;
+}
+.container-footer{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: var(--cards-gap);
+    row-gap: 72px;
+}
+.container-footer-logo {
+    max-width: 264px;
+    margin: 0
+}
+.link-footer-logo{
+    display: block;
+}
+.sub-form {
+    display: flex;
+    gap: var(--cards-gap);
+}
+.sub-input{
+    Width: 264px;
+}
+.container-sub{
+    width: 100%;
+}
+.subscribe-btn{
+    margin: 0;
+}
+.text-subscribe{
+    text-align: start;
+}
+.title-footer-soc{
+    text-align: start;
+}
+.list-footer-soc{
+    margin: 0;
+}
+.footer-text{
+    margin: 0;
+}
+}
+
+/*DESKTOP*/
+
+@media  screen and (min-width:1158px) {
+.container{
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+  
+.container-header{
+    display: flex;
+    justify-content: space-between;
+    width: 1158px;
+}
+
+    /* LOGO */
+
+
+.link-logo {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.17;
+    /* identical to box height, or 117% */
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primary-brand-color);
+    margin-right: 76px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+a {
+    text-decoration: none;
+}
+.logo-studio {
+    color: var(--title-color);
+}
+/* HEADER*/
+
+
+.header{
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+}
+
+.container-nav{
+    display: flex;
+    align-items: center;
+}
+
+.list-header{
+    display: flex;
+    gap: 40px;
+}
+
+.link-header {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    /* identical to box height, or 150% */
+    letter-spacing: 0.02em;
+    color:var(--title-color);
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: block;
+    position: relative;
+
+}
+.link-header::after{
+    content: "";
+    position:absolute;
+    width: 100%;
+    height: 4px;
+    background-color: var(--pressed-state-color);
+    border-radius: 2px;
+    display: block;
+    left:0;
+    bottom: 0;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: left;
+    transition: transform 250ms var(--animation-delay);
+    bottom: -1px;
+}
+
+.link-header:last-child{
+    margin-right: 0;;
+}
+
+.link-header:hover, 
+.link-header:focus,
+.link-header.current {
+    color: var(--pressed-state-color);
+    transition: color 250ms var(--animation-delay);
+}
+.link-header:hover::after, 
+.link-header:focus::after, 
+.link-header.current::after{
+    opacity: 1;
+    transform: scale(1);
+    transition: transform 250ms var(--animation-delay);
+    transform-origin: right;
+}
+
+.address {
+    font-style: normal;
+}
+.list-address{
+    display: flex;
+    gap: 40px;
+}
+.link-address {
+    line-height: 1.5;
+    /* identical to box height, or 150% */
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+    text-shadow: var(--borders-accent-color);
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: block;
+    transition: color 250ms var(--animation-delay); 
+    
+}
+.link-address:hover , .link-address:focus {
+    color: var(--pressed-state-color);
+}
+.link-address:last-child{
+    margin-right: 0;
+}  
+
+
+/* MAIN PAGE */
+
+.hero {
+    max-width: 1440px;
+    padding: 188px 0 188px 0;
+}
+
+
+/*FEATURES*/
+
+.features{
+ padding: 120px 0;
+}
+  
+.list-features{
+    gap: var(--cards-gap);
+}
+.list-features-item{
+  width: calc((100% - 3 * var(--cards-gap))/ 4) ;
+}
+.link-icon{
+    width: 264px;
+    height: 112px;
+    background-color: var(--light-cloud-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    margin-bottom: 8px;  
+}
+
+.subject {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    /* identical to box height, or 120% */
+    letter-spacing: 0.02em;
+    color: var(--title-color);
+    margin-bottom: 8px;
+}
+.text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    /* or 150% */
+    letter-spacing: 0.02em;
+}
+
+/*What are we doing*/
+.container-images{
+    display: flex;
+    padding-bottom: 120px;
+}
+
+/*Our team*/
+
+.container-team--cards{
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+.container-team--cards>.container{
+    max-width: 1158px;
+}
+.list-team{
+    gap: var(--cards-gap);
+}
+.list-team-item {
+    width: calc((100% - 3 * var(--cards-gap))/ 4);
+}
+
+/* Customers */
+.customers {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+.customers>.container{
+    max-width: 1158px;
+}
+.list-customers {
+    gap: var(--cards-gap);
+}
+.link-customers-item {
+    width: calc((100% - 5 * var(--cards-gap))/ 6);
+}
+
+/* FOOTER */
+
+
+.footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.footer>.container{
+    max-width: 1158px;
+
+}
+.container-footer{
+    flex-wrap: nowrap;
+    gap: initial;
+}
+.container-footer-logo{
+    margin-right: 120px;
+}
+.link-footer-logo{
+    margin-right: 76px;
+    display: inline-block;
+}
+
+.container-sub{
+    margin-left: 80px;
+}
+
+.sub-input{
+  opacity: 1;
+}
+
+}

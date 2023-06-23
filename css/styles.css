@@ -16,7 +16,8 @@ ul{
 
 img{
     display: block;
-    max-width: 100%;
+    width: 100%;
+    height: auto;
 }
 :root {
     --light-cloud-color:#F4F4FD;
@@ -33,10 +34,10 @@ img{
 }
 
 .container{
-    width: 1158px;
-    padding-left: 15px;
-    padding-right: 15px;
     margin: 0 auto;
+    width: 100%;  
+    padding-left: 16px;
+    padding-right: 16px;
 }
 .container-header{
     display: flex;
@@ -166,11 +167,10 @@ a {
 /* MAIN PAGE */
 
 .hero {
-    max-width: 1440px;
+    width: 100%;
     margin: 0 auto;
     background-color: var(--title-color);
-    padding: 188px 0 188px 0;
-    justify-content: center; 
+    padding: 112px 0 112px 0;
     background-image:
     linear-gradient(rgba(46, 47, 66, 0.7), 
     rgba(46, 47, 66, 0.7)),
@@ -183,14 +183,13 @@ a {
 
 .title-hero {
     font-weight: 700;
-    font-size: 56px;
-    line-height: 1.07;
-    /* or 107% */
+    font-size: 36px;
+    line-height: 1.11;
     letter-spacing: 0.02em;
     color: var(--background-color);
     margin: auto;
-    margin-bottom: 48px;
-    max-width: 496px;
+    margin-bottom: 72px;
+    max-width: 320px;
     text-align: center;
 }
 .order-btn {
@@ -220,8 +219,8 @@ a {
 /*FEATURES*/
 
 .features{
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 96px;
+  padding-top: 96px;
 }
 
 .visually-hidden{
@@ -239,43 +238,47 @@ a {
    
 .list-features{
     display: flex;
-    flex-wrap: wrap;
-    gap: var(--cards-gap);
-}
-.list-features-item{
-  width: calc((100% - 3 * var(--cards-gap))/ 4) ;
-}
-.link-icon{
-    width: 264px;
-    height: 112px;
-    background-color: var(--light-cloud-color);
-    display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 4px;
-    margin-bottom: 8px;
-    
+    flex-wrap: wrap;
+    gap: 72px;
+}
+.list-features-item{
+    max-width: 396px;
 }
 
+.link-icon{
+    display: none;
+} 
+
 .subject {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    /* identical to box height, or 120% */
+   font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    /* identical to box height, or 111% */
+    text-align: center;
     letter-spacing: 0.02em;
-    color: var(--title-color);
+    text-transform: capitalize;
     margin-bottom: 8px;
+    color: var(--title-color);
 }
 .text {
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     /* or 150% */
     letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+
 }
 
 /*What are we doing*/
 
+.container-images{
+    display: none;
+}
 .title-images {
     font-size: 36px;
     line-height: 1.11;
@@ -286,9 +289,7 @@ a {
     color: var(--title-color);
     margin-bottom: 72px;
 }
-.container-images{
-    padding-bottom: 120px;
-}
+
 .list-images{
     display: flex;
     flex-wrap: wrap;   
@@ -304,9 +305,10 @@ a {
 
 .container-team--cards{
     background-color: var(--light-cloud-color);
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
+
 .title-team {
     font-size: 36px;
     line-height: 1.11;
@@ -317,19 +319,21 @@ a {
     color: var(--title-color);
     margin-bottom: 72px;
 }
+
 .list-team{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 72px;
+    
 }
 .list-team-item {
     background-color: var(--background-color);
-    margin-right: var(--cards-gap);
-    width: calc((100% - 3 * var(--cards-gap))/ 4);
     border-radius:0 0 4px 4px;
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-
+    width: 264px;
 }
 .list-team-item:last-child{
     margin-right: 0;
@@ -389,8 +393,8 @@ a {
 }
 /* Customers */
 .customers {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 .title-customers{
     font-weight: 700;
@@ -406,12 +410,11 @@ a {
 .list-customers {
     display: flex;
     justify-content: center;
-    gap: var(--cards-gap);
-    
-   
+    flex-wrap: wrap;
+    gap: 72px 16px; 
 }
 .link-customers-item {
-    width: calc((100% - 5 * var(--cards-gap))/ 6);
+    width: calc((100% - 16px)/ 2);
     height: 88px;
     display: block;
 }
@@ -441,17 +444,17 @@ a {
 
 /* FOOTER */
 
+
 .footer {
     background-color: var(--title-color);
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
-.container-footer{
-    display: flex;
-    align-items: baseline;
-}
+
 .container-footer-logo{
-    margin-right: 120px;
+    width: 100%;
+    max-width: 268px;
+    margin: 0 auto;
 }
 .link-footer-logo{
     font-family: 'Raleway', sans-serif;
@@ -463,8 +466,8 @@ a {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--primary-brand-color);
-    margin-right: 76px;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
     margin-bottom: 16px;
 }
 .logo-footer-studio {
@@ -475,11 +478,9 @@ a {
     max-width: 264px;
     font-size: 16px;
     line-height: 1.5; /* 24/16 */
-   
+    margin-bottom: 72px;
 }
-.container-sub{
-    margin-left: 80px;
-}
+
 .text-subscribe{
     font-weight: 500;
     font-size: 16px;
@@ -487,17 +488,17 @@ a {
     letter-spacing: 0.02em;
     color: var(--background-color); 
     margin-bottom: 16px;  
+    text-align: center;
 }
-.sub-form{
-   display: flex;
-   gap: var(--cards-gap);
-}
+
 .sub-label{
    display: flex;
 }
 
 .sub-input{
-    Width: 264px;
+    display: block;
+    width: 100%;
+    max-width: 396px;
     Height: 40px;
     background-color: transparent;
     border: 1px solid var(--background-color);
@@ -510,6 +511,10 @@ a {
     color: var(--background-color);
     padding-left: 16px;
     outline: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+    opacity: 0.3;
 }
 .sub-input::placeholder{
     font-weight: 400;
@@ -537,6 +542,7 @@ a {
     padding: 8px 24px;
     cursor: pointer;
     transition: box-shadow 250ms var(--animation-delay);
+    margin: 0 auto;
 }
 
 .icon-sub{
@@ -554,11 +560,13 @@ a {
     letter-spacing: 0.02em;
     color: var(--background-color);
     margin-bottom: 16px;
+    text-align: center;
 }
 .list-footer-soc {
     display: flex;
     justify-content: center;
     gap: 16px;
+    margin-bottom: 72px;
     
 }
 .link-footer-soc-item {
@@ -586,7 +594,6 @@ a {
 .link-footer-soc-icon:focus {
    background-color: #31D0AA; 
 }
-
 /* PORTFOLIO PAGE */
 .portfolio-section{
     padding-top: 96px;
