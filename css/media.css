@@ -24,6 +24,9 @@
 .menu-btn{
     display: none;
 }
+.mob-menu{
+    display: none;
+}
 .list-header{
     display: flex;
     gap: 40px;
@@ -214,13 +217,18 @@
     padding-right: 15px;
 }
 
+/* HEADER*/
   
 .container-header{
     width: 1158px;
 }
 
-
-/* HEADER*/
+.menu-btn{
+    display: none;
+}
+.mob-menu{
+    display: none;
+}
 .list-address{
     display: flex;
     padding-top: 24px;
