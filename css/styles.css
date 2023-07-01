@@ -656,13 +656,15 @@ a {
 }
 /* PORTFOLIO PAGE */
 .portfolio-section{
-    padding-top: 96px;
-    padding-bottom: 120px;
+    width: 100%;
+    padding-top: 48px;
+    padding-bottom: 48px;
 }
 .container-filters{
+    width: 100%;
     display: flex;
-    justify-content: center;
-    margin-bottom: 72px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
     gap: var(--cards-gap);
 }
 .filter-item {
@@ -673,6 +675,7 @@ a {
     /* identical to box height, or 150% */
     text-align: center;
     letter-spacing: 0.04em;
+    white-space: nowrap;
     color: var(--primary-brand-color);
     background-color: var(--light-cloud-color);
     border-radius: 4px;
@@ -696,28 +699,22 @@ a {
 
 .product-set {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
-
-.product-item {
-    margin-right: var(--cards-gap);
+.product-item{
+    width: 100%;
+    max-width: 396px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.product-item:not(:last-child){
     margin-bottom: 48px;
-    width:calc((100% - 2 * var(--cards-gap))/3);;
-   
 }
 
-.product-item:nth-last-child(-n+3){
-    margin-bottom: 0;
-}
-
-.product-item:nth-child(3n){
-    margin-right: 0;
-}
 .link-product{
     display: block;
     transition: box-shadow 250ms var(--animation-delay);
 }
-
 
 .link-product:hover, .link-product:focus {
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
